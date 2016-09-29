@@ -11,6 +11,9 @@
     "url": "https://github.com/conroywhitney/phoenix_trello"
   },
   "scripts": {
+    "lint": "npm-run-all --parallel lint:*",
+    "lint:js": "NODE_ENV=production eslint 'client/**/*.js' --max-warnings 0",
+    "lint:sass": "NODE_ENV=production sass-lint -v --max-warnings 0",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "author": "",
@@ -32,8 +35,10 @@
     "extract-text-webpack-plugin": "^1.0.1",
     "node-libs-browser": "^1.0.0",
     "node-sass": "^3.10.0",
+    "npm-run-all": "^3.1.0",
     "sass-lint": "^1.9.1",
     "sass-loader": "^4.0.2",
+    "sasslint-webpack-plugin": "^1.0.4",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.2"
   },

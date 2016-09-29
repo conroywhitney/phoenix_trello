@@ -4,6 +4,9 @@
     "zeal/react"
   ],
   "root": true,
+  "rules": {
+    "comma-dangle": [1, "only-multiline"]
+  },
   "settings": {
     "import/resolver": "webpack"
   }
