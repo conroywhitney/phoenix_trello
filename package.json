@@ -6,6 +6,10 @@
   "directories": {
     "test": "test"
   },
+  "repository": {
+    "type" : "git",
+    "url" : "https://github.com/conroywhitney/phoenix_trello"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
