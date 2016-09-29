@@ -26,5 +26,28 @@
     "sass-loader": "^4.0.2",
     "style-loader": "^0.13.1",
     "webpack": "^1.13.2"
+  },
+  "dependencies": {
+    "bourbon": "^4.2.7",
+    "bourbon-neat": "^1.8.0",
+    "classnames": "^2.2.5",
+    "es6-promise": "^4.0.3",
+    "history": "^4.2.0",
+    "invariant": "^2.2.1",
+    "isomorphic-fetch": "^2.2.1",
+    "moment": "^2.15.1",
+    "react": "^15.3.2",
+    "react-addons-css-transition-group": "^15.3.2",
+    "react-dnd": "^2.1.4",
+    "react-dnd-html5-backend": "^2.1.2",
+    "react-dom": "^15.3.2",
+    "react-gravatar": "^2.5.0",
+    "react-page-click": "^3.0.0",
+    "react-redux": "^4.4.5",
+    "react-router": "^2.8.1",
+    "react-router-redux": "^4.0.6",
+    "redux": "^3.6.0",
+    "redux-logger": "^2.6.1",
+    "redux-thunk": "^2.1.0"
   }
 }
