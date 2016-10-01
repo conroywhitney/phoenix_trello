@@ -6,7 +6,11 @@
   "root": true,
   "rules": {
     "comma-dangle": [1, "only-multiline"],
-    "jsx-quotes": [1, "prefer-double"]
+    "jsx-quotes": [1, "prefer-double"],
+    "no-unused-vars": [1, {
+      "args": "all", "argsIgnorePattern": "^_",
+      "vars": "all", "varsIgnorePattern": "^_"
+    }]
   },
   "settings": {
     "import/resolver": "webpack"
