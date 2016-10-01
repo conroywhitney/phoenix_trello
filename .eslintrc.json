@@ -7,6 +7,7 @@
   "rules": {
     "comma-dangle": [1, "only-multiline"],
     "jsx-quotes": [1, "prefer-double"],
+    "react/prefer-stateless-function": [0],
     "no-unused-vars": [1, {
       "args": "all", "argsIgnorePattern": "^_",
       "vars": "all", "varsIgnorePattern": "^_"
