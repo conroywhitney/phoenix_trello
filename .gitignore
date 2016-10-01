@@ -5,6 +5,11 @@
 /*.ez
 /node_modules
 
+priv/static/js/application.js
+priv/static/js/app.js
+priv/static/css/application.css
+priv/static/css/app.css
+
 # Generated on crash by the VM
 erl_crash.dump
 
