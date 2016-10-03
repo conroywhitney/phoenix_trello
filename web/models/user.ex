@@ -11,7 +11,7 @@ defmodule PhoenixTrello.User do
     timestamps()
   end
 
-  @required_fields ~w(first_name last_name email)a
+  @required_fields ~w(first_name last_name email password)a
   @optional_fields ~w(encrypted_password)a
 
   @derive { Poison.Encoder, only: [:id, :first_name, :last_name, :email] }
@@ -27,17 +27,16 @@ defmodule PhoenixTrello.User do
     |> generate_encrypted_password(params)
   end
 
-  defp generate_encrypted_password(changeset, params) do
-    case Dict.fetch(params, "password") do
-      {:ok, password} ->
-        case changeset do
-          %Ecto.Changeset{valid?: true} ->
-            put_change(changeset, :encrypted_password, Comeonin.Bcrypt.hashpwsalt(password))
-          _ ->
-            changeset
-        end
+  defp generate_encrypted_password(changeset, %{"password" => password}) do
+    case changeset do
+      %Ecto.Changeset{valid?: true} ->
+        put_change(changeset, :encrypted_password, Comeonin.Bcrypt.hashpwsalt(password))
       _ ->
         changeset
     end
+  end
+
+  defp generate_encrypted_password(changeset, _) do
+    :error
   end
 end
